@@ -1,21 +1,10 @@
 <?php
 
-ini_set('display_errors',1); ini_set('display_startup_errors',1); error_reporting(-1);
+include_once "dropbox-global.php";
 
-require_once "dropbox-setting.php";
-require_once "dropbox-sdk-php-1.1.5/lib/Dropbox/autoload.php";
-use \Dropbox as dbx;
-
-print_r($setting);
-
-$appInfo = dbx\AppInfo::loadFromJson($setting);
-
-$webAuth = new dbx\WebAuthNoRedirect($appInfo, "PHP-SOPService/1.0");
 $authorizeUrl = $webAuth->start();
 
 echo $authorizeUrl;
-
-echo json_encode($setting);
 
 
 ?>
