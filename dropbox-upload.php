@@ -19,6 +19,8 @@ $accountInfo = $dbxClient->getAccountInfo();
 print_r($accountInfo);
 
 
+print_r($_FILES);
+
 $uploadedFile = $_FILES['uploaded_file'];
 $f = fopen($uploadedFile['tmp_name'], "rb");
 $result = $dbxClient->uploadFile("/SOPService/".$uploadedFile['name'], dbx\WriteMode::force(), $f);
