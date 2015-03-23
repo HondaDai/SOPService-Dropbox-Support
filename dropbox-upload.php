@@ -18,7 +18,7 @@ ini_set('display_errors',1); ini_set('display_startup_errors',1); error_reportin
 // $accountInfo = $dbxClient->getAccountInfo();
 // print_r($accountInfo);
 
-
+print_r($_POST);
 print_r($_FILES);
 
 // $uploadedFile = $_FILES['uploaded_file'];
